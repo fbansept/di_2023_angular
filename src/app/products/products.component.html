@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6" *ngFor="let product of productList">
+      <div class="card mt-3">
+        <img class="card-img-top" src="..." alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <p class="card-text">Quantité disponible : {{ product.quantity }}</p>
+          <p class="card-text">Fournisseur : {{ product.supplier.login }}</p>
+          <a class="btn btn-primary me-1">Acheter</a>
+          <a class="btn btn-danger" (click)="onDeleteProduct(product.id)">
+            Supprimer
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
